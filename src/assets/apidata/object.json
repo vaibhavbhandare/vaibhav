@@ -1,0 +1,13 @@
+
+
+[ {"id":"1","name":"vaibhav", "email":"vaibhavbhandare31@gmail.com",
+    "address": {"city":"kolhapur","state":"maharashtra","team":{ "one":"best","two":"Check"}}},
+
+    {"id":"2","name":"Shiva","email":"vaibhavbhandare31@gmail.com",
+    "address": {"city":"pune","state":"Tamilnadu","team":{ "one":"good","two":"Check"}}},
+
+    {"id":"3","name":"Sandeep","email":"vaibhavbhandare31@gmail.com",
+    "address": {"city":"mumbai","state":"Jammu kashmir","team":{ "one":"nice","two":"Check"}}} ]
+
+
+    

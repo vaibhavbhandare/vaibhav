@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Admin Login Only</h2>
+          <form action="/action_page.php">
+              <div class="form-group">
+                <label for="email">Email :</label> 
+                <input name="uemail" type="email" placeholder="Enter Email Id here" [(ngModel)]="uemail" class="form-control"/>
+              </div>       
+              <div class="form-group">
+              <label for="pwd">Enter Password :</label>
+              <input name="upwd" type="password" class="form-control" placeholder="Password" [(ngModel)]="upwd"/>
+              </div>
+              <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+          </form>
+</div>

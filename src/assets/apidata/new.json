@@ -1,0 +1,16 @@
+[{
+    "name":"vaibhav",
+    "email":"vaibhavbhandare31@gmail.com",
+    "address": {
+      "city":"kolhapur",
+      "state":"maharashtra",
+      "team":{
+        "one":"best",
+        "two":"verynice"
+      }
+    },
+    "study":{
+     " per":"70",
+      "ssc":"87"
+    }
+  }]

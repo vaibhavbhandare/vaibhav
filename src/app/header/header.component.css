@@ -1,0 +1,16 @@
+.nav
+{
+    background-color:black;
+    overflow: hidden;
+    
+}
+
+.nav a{
+    float: left;
+    padding: 12px 15px;
+    color:white;
+    
+    }
+.nav a:hover{
+    background-color: lightgreen;
+}

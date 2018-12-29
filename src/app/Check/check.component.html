@@ -1,0 +1,39 @@
+<div class="container">
+    <div *ngFor="let item of data">
+        <div *ngIf="item.id==selectedid">
+            <table class="table table-border">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>city</th>
+                    <th>state</th>
+                    <th>one</th>
+                </tr>
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.address.city}}</td>
+                    <td>{{item.address.state}}</td>
+                    <td>{{item.address.team.one}}</td>
+                </tr>
+             </table>
+        </div>
+    </div>
+    <div>
+        <div class="float-left">
+                <button class="btn btn-primary" (click)="onPrevious()">Previous</button>
+        </div>
+        <div class="float-right" >
+           <button class="btn btn-primary" (click)="onNext()">Next</button>
+        </div>
+        <div class="float-left">
+          <button class="btn btn-primary" (click)="onHome()">Home</button>
+        </div>
+    </div>
+            
+
+    
+
+</div>

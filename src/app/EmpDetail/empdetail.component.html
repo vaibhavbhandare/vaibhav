@@ -1,0 +1,29 @@
+<div class="container">
+    
+    <div *ngFor="let item of data">
+        <div *ngIf="item.id==selectedid">
+               <table class="table table-border">
+                    <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Address</th>
+                        </tr> 
+                        <tr>
+                                <td>{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.salary}}</td>
+                                <td>{{item.dob}}</td>
+                                <td>{{item.gender}}</td>
+                                <td>{{item.Address}}</td>
+                        </tr> 
+               </table>
+        </div>
+
+     </div>
+     <button (click)="onPrev()">Previous</button>
+     <button (click)="onNext()">onNext</button>
+
+</div>

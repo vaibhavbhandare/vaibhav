@@ -1,0 +1,36 @@
+<div class="container">
+      <div>
+            <form (submit)=onSubmit()>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" [(ngModel)]="user.name" name="name">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control" [(ngModel)]="user.email" name="email">
+            </div>
+            <input type="submit" class="btn btn-primary" value="submit" >
+            </form>
+      </div>
+      <div >
+        <table class="table table-border">
+              <tr>
+                  <!-- <th>Employee ID</th>  -->
+               <th>Name</th>
+               <th>Email</th>
+               <!-- <th>City</th>
+               <th>State</th>
+               <th>One</th>
+               <th>Details</th></tr> -->
+               <tr *ngFor="let item of data">
+                     <!-- <td>{{item.id}}</td> -->
+                  <td>{{item.name}}</td>
+                  <td>{{item.email}}</td>
+                  <!-- <td>{{item.address.city}}</td>
+                  <td>{{item.address.state}}</td>
+                  <td>{{item.address.team.one}}</td> -->
+                  <!-- <td class="my" (click)="onCheck(item.id)">{{item.address.team.two}}</td> -->
+               </tr>
+        </table>
+      </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+    <h2>Student Admission Form</h2>
+    <form #studentForm="ngForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" #nameRef="ngModel" minlength="4" required class="form-control" name="name" ngModel>
+            <!-- <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger">
+            <p>Please Enter a Name</p>
+         </div> -->
+            <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)">
+                <div [hidden]="!nameRef.errors.required" class="alert alert-danger">
+                    <p>Please Enter a Name</p>
+                </div>
+                <div [hidden]="!nameRef.errors.minlength" class="alert alert-danger">
+                    <p>Please Enter Atleast 4 Characters</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Select City</label>
+                <select name="city" #cities required class="form-control" ngModel>
+                    <option value="select">Select city</option>
+                    <option value="Kolhapur">Kolhapur</option>
+                    <option value="Pune">Pune</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" #emailRef="ngModel" required class="form-control" name="email" ngModel>
+
+        </div>
+        <div class="form-group">
+            <label>Qualification</label>
+            <input type="text" class="form-control" name="qualification" ngModel>
+        </div>
+        <div ngModelGroup="address">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" class="form-control" name="city" ngModel>
+            </div>
+            <div class="form-group">
+                <label>Street</label>
+                <input type="text" class="form-control" name="street" ngModel>
+            </div>
+            <div class="form-group">
+                <label>PostalCode</label>
+                <input type="text" class="form-control" #code="ngModel" required pattern="^[1-9][0-9]{5}$" name="postalcode"
+                    ngModel>
+                <div *ngIf="code.errors && (code.dirty || code.touched)">
+                    <div [hidden]="!code.errors.pattern" class="alert alert-danger">
+                        <p>Please Enter A postal Code 6 Digit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button (click)="submit(studentForm.value)" type="button" [disabled]="!studentForm.form.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>
